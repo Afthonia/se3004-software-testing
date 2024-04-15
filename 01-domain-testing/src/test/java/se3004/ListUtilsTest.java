@@ -1,6 +1,5 @@
 package se3004;
 
-
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -42,22 +41,22 @@ class ListUtilsTest {
         assertThrows(IndexOutOfBoundsException.class, () -> {
             ListUtils.sameEnds(new int[]{}, rand.nextInt((int)(Double.POSITIVE_INFINITY) - 1) + 1);
         });
-        System.out.println("Test 3 Passed!");
+        System.out.println("Test 4 Passed!");
     }
 
     @Test
-    @DisplayName("Empty Array Will Return IndexOutOfBoundsException If 'len' Is Not 0")
+    @DisplayName("Empty Array Will Return False If 'len' Is Not Its Length")
     void arrayWithDifferentElementsReturnsFalseIfLenIsNotItsLength() {
         int[] arr = new int[]{43,5456,64,14,45};
         assertFalse(ListUtils.sameEnds(arr, rand.nextInt(arr.length)));
-        System.out.println("Test 3 Passed!");
+        System.out.println("Test 5 Passed!");
     }
 
     @Test
-    @DisplayName("Empty Array Will Return IndexOutOfBoundsException If 'len' Is Not 0")
+    @DisplayName("Empty Array Will Return True If 'len' Is Its Length")
     void arrayReturnsTrueIfLenIsItsLength() {
         int[] arr = new int[]{43,67,534,35,43};
         assertTrue(ListUtils.sameEnds(arr, arr.length));
-        System.out.println("Test 3 Passed!");
+        System.out.println("Test 6 Passed!");
     }
 }

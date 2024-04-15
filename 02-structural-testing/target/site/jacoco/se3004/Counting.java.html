@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Counting.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">domain-testing</a> &gt; <a href="index.source.html" class="el_package">se3004</a> &gt; <span class="el_source">Counting.java</span></div><h1>Counting.java</h1><pre class="source lang-java linenums">package se3004;
+
+/*
+Say that a &quot;clump&quot; in an array is a series of 2 or more adjacent elements of the same value. Return the number of clumps in the given array.
+
+countClumps([1, 2, 2, 3, 4, 4]) → 2
+countClumps([1, 1, 2, 1, 1]) → 2
+countClumps([1, 1, 1, 1, 1]) → 1
+*/
+
+<span class="nc" id="L11">public class Counting {</span>
+
+    public static int countClumps(int[] nums){
+<span class="fc" id="L14">        boolean match = false;</span>
+<span class="fc" id="L15">        int count = 0;</span>
+
+<span class="fc bfc" id="L17" title="All 2 branches covered.">        for (int i = 0; i &lt; nums.length-1; i++) {</span>
+
+<span class="fc bfc" id="L19" title="All 4 branches covered.">            if (nums[i] == nums[i+1] &amp;&amp; !match) {</span>
+<span class="fc" id="L20">                match = true;</span>
+<span class="fc" id="L21">                count++;</span>
+            }
+<span class="fc bfc" id="L23" title="All 2 branches covered.">            else if (nums[i] != nums[i+1]) {</span>
+<span class="fc" id="L24">                    match = false;</span>
+                }
+            }
+<span class="fc" id="L27">            return count;</span>
+        }
+    }
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
